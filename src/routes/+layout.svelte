@@ -15,7 +15,18 @@
     </div>
 </div>
 
+<div class="content">
+    <slot />
+</div>
+
 <style lang="scss">
+    .content{
+        padding: 20px;
+
+        width: 100%;
+        height: fit-content;
+    }
+
     h1 {
         min-width: 200px;
     }
@@ -102,4 +113,3 @@
     }
 </style>
 
-<slot />

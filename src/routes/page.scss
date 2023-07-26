@@ -28,8 +28,6 @@ body{
     margin: 0;
     padding: 10px;
 
-    min-height: 100vh;
-
     background-color: var(--primary);
 }
 
@@ -47,6 +45,10 @@ h1 {
 p {
     margin: 0;
     padding: 0;
+
+    font-size: 1.25rem;
+
+    font-family: 'Rubik';
 
     color: var(--text);
 }
