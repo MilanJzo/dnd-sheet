@@ -35,7 +35,7 @@
         flex-direction: row;
         gap: 20px;
 
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid var(--text);
     }
 
     .title {
@@ -79,6 +79,8 @@
         font-size: 1.25rem;
 
         user-select: none;
+
+        color: var(--text);
 
         &:hover {
             color: darkblue;
