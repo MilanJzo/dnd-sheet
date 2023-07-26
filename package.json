@@ -33,7 +33,9 @@
     "type": "module",
     "dependencies": {
         "@libsql/client": "^0.3.1",
+        "@lucia-auth/adapter-sqlite": "^2.0.0",
         "drizzle-orm": "^0.27.2",
+        "lucia": "^2.0.0",
         "sass": "^1.64.1"
     }
 }

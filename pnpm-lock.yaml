@@ -1,16 +1,18 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   '@libsql/client':
     specifier: ^0.3.1
     version: 0.3.1
+  '@lucia-auth/adapter-sqlite':
+    specifier: ^2.0.0
+    version: 2.0.0(@libsql/client@0.3.1)(lucia@2.0.0)
   drizzle-orm:
     specifier: ^0.27.2
     version: 0.27.2(@libsql/client@0.3.1)
+  lucia:
+    specifier: ^2.0.0
+    version: 2.0.0
   sass:
     specifier: ^1.64.1
     version: 1.64.1
@@ -623,6 +625,22 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    dev: false
+
+  /@lucia-auth/adapter-sqlite@2.0.0(@libsql/client@0.3.1)(lucia@2.0.0):
+    resolution: {integrity: sha512-Hiy8WND/1mi25r0M2ruSml+Ab5GJLr4XZEHApYw1lxybF+VlPUyX7oTtIVCSgvq/SWiP/tvnyPwnXAPmNr8/bg==}
+    peerDependencies:
+      '@libsql/client': ^0.3.0
+      better-sqlite3: ^8.0.0
+      lucia: ^2.0.0
+    peerDependenciesMeta:
+      '@libsql/client':
+        optional: true
+      better-sqlite3:
+        optional: true
+    dependencies:
+      '@libsql/client': 0.3.1
+      lucia: 2.0.0
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1955,6 +1973,10 @@ packages:
       es5-ext: 0.10.62
     dev: true
 
+  /lucia@2.0.0:
+    resolution: {integrity: sha512-WRBMoZIgTHH6y2bAEHZWgWcMH6tDsQ+wf45juUgmn3ycjipn/e6OGpWki4XSjEuRm50WXghH+2EF9LCjCHUsUw==}
+    dev: false
+
   /magic-string@0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -2854,3 +2876,7 @@ packages:
   /zod@3.21.4:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
