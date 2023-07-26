@@ -13,6 +13,7 @@
 }
 
 :root {
+    --font-size: 1rem;
     --text: black;
     --primary: #FFFAEB;
     --secondary: #F5F5F5;
@@ -32,6 +33,9 @@ body{
 }
 
 h1 {
+    width: fit-content;
+    height: fit-content;
+
     margin: 0;
     padding: 0;
 
@@ -46,9 +50,92 @@ p {
     margin: 0;
     padding: 0;
 
-    font-size: 1.25rem;
+    font-size: var(--font-size);
 
     font-family: 'Rubik';
 
     color: var(--text);
+}
+
+a {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    color: black;
+
+    font-family: 'Edit';
+    font-size: var(--font-size);
+
+    user-select: none;
+
+    color: var(--text);
+
+    &:hover {
+        color: darkblue;
+    }
+}
+
+label {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Rubik';
+    font-size: var(--font-size);
+
+    color: var(--text);
+}
+
+input {
+    margin: 0;
+    padding: 2px;
+
+    font-family: 'Rubik';
+    font-size: var(--font-size);
+
+    background-color: var(--primary);
+
+    border: none;
+    border-bottom: 1px solid var(--text);
+
+    color: var(--text);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+
+    margin: 0;
+    padding: 0;
+    padding-inline: 5px;
+
+    font-family: 'Edit';
+    font-size: var(--font-size);
+
+    background-color: var(--primary);
+
+    border: none;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+
+    font-size: var(--font-size);
+
+    color: var(--text);
+}
+
+form {
+    width: fit-content;
+    height: fit-content;
+
+    padding: 10px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }

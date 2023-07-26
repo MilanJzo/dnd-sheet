@@ -21,10 +21,10 @@
 
 <style lang="scss">
     .content{
-        padding: 20px;
-
         width: 100%;
         height: fit-content;
+
+        // padding: 20px;
     }
 
     h1 {
@@ -80,22 +80,7 @@
     }
 
     a {
-        margin: 0;
-        padding: 0;
-
-        text-decoration: none;
-        color: black;
-
-        font-family: 'Edit';
         font-size: 1.25rem;
-
-        user-select: none;
-
-        color: var(--text);
-
-        &:hover {
-            color: darkblue;
-        }
     }
 
     @media (max-width: 800px) {

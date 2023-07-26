@@ -6,8 +6,6 @@
     export let data: PageData;
 </script>
 
-<p>Settings</p>
-
 <h1>Profile</h1>
 
 <p>User id: {data.userId}</p>
