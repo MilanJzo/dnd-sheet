@@ -16,7 +16,13 @@
 </div>
 
 <style lang="scss">
+    h1 {
+        min-width: 200px;
+    }
 
+    img{
+        pointer-events: none;
+    }
 
     div {
         padding: 0;
@@ -54,6 +60,8 @@
 
         font-family: 'Edit';
         font-size: 1.25rem;
+
+        user-select: none;
 
         &:hover {
             color: darkblue;
