@@ -1,1 +1,1 @@
-<h1>Characters - view</h1>
+<p>Characters - view</p>
