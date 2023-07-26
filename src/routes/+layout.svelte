@@ -2,12 +2,12 @@
     import "./page.scss"
 </script>
 
-<div>
+<div class="navbar">
     <img src="/Dragon.svg" alt="Logo" width="50">
-    <div>
+    <div class="title">
         <h1>DnD Sheet</h1>
 
-        <div>
+        <div class="options">
             <a href="/">Home</a>
             <a href="/characters">Characters</a>
             <a href="/settings">Settings</a>
@@ -24,31 +24,48 @@
         pointer-events: none;
     }
 
-    div {
+    .navbar {
         padding: 0;
         margin: 0;
 
         width: 100%;
-        height: 5vh;
+        height: fit-content;
 
         display: flex;
         flex-direction: row;
-        align-items: center;
         gap: 20px;
 
         border-bottom: 2px solid black;
+    }
 
-        & div{
-            padding: 0;
-            margin: 0;
+    .title {
+        padding: 0;
+        margin: 0;
 
-            width: fit-content;
-            height: 100%;
+        width: 100%;
+        height: auto;
 
-            align-items: last baseline;
+        display: flex;
+        flex-direction: row;
+        align-items: last baseline;
+        gap: 20px;
 
-            border: none;
-        }
+        border: none;
+    }
+
+    .options {
+        padding: 0;
+        margin: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: last baseline;
+        gap: 20px;
+
+        border: none;
     }
 
     a {
@@ -65,6 +82,20 @@
 
         &:hover {
             color: darkblue;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .title {
+            padding: 0;
+            flex-direction: column;
+            justify-content: last baseline;
+            align-items: flex-start;
+            gap: 0px;
+        }
+
+        .options {
+            padding-left: 3px;
         }
     }
 </style>
