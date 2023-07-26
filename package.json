@@ -33,6 +33,7 @@
     "type": "module",
     "dependencies": {
         "@libsql/client": "^0.3.1",
-        "drizzle-orm": "^0.27.2"
+        "drizzle-orm": "^0.27.2",
+        "sass": "^1.64.1"
     }
 }
