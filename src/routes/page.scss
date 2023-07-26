@@ -5,6 +5,13 @@
     src: local(''), url('/fonts/Mad Hacker.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Edit';
+    font-style: normal;
+    font-weight: normal;
+    src: local(''), url('/fonts/editundo.ttf') format('truetype');
+}
+
 body{
     margin: 0;
     padding: 10px;

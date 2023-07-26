@@ -52,6 +52,7 @@
         text-decoration: none;
         color: black;
 
+        font-family: 'Edit';
         font-size: 1.25rem;
 
         &:hover {
