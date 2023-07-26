@@ -7,8 +7,8 @@
 
 <h1>Sign up</h1>
 <form method="post" use:enhance>
-	<input name="username" id="username" placeholder="Username" /><br />
-	<input type="password" name="password" id="password" placeholder="Password" /><br />
+    <input name="username" id="username" placeholder="Username" /><br />
+    <input type="password" name="password" id="password" placeholder="Password" /><br />
     <div>
         <a href="/login">Sign in</a>
         <button type="submit">Sign up</button>
@@ -20,9 +20,9 @@
 {/if}
 
 <style>
-	div {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 </style>

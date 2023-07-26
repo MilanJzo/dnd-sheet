@@ -8,8 +8,47 @@
 
 <h1>Profile</h1>
 
-<p>User id: {data.userId}</p>
-<p>Username: {data.username}</p>
-<form method="post" action="?/logout" use:enhance>
-    <button type="submit">Sign out</button>
-</form>
+<div class="profile">
+    <div class="bullet-point">
+        <h2>Username</h2>
+        <div>
+            <p>{data.username}</p>
+        </div>
+    </div>
+    <div class="bullet-point">
+        <h2>Account ID</h2>
+        <div>
+            <p>{data.userId}</p>
+        </div>
+    </div>
+    <form method="post" action="?/logout" use:enhance>
+        <button type="submit">Sign out</button>
+    </form>
+</div>
+
+<style lang="scss">
+    .profile {
+        padding-inline: 10px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bullet-point {
+        width: 300px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & div {
+            width: 150px;
+        }
+    }
+
+    form{
+        padding: 0;
+        padding-top: 5px;
+    }
+</style>

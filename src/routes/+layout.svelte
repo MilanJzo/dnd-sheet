@@ -1,9 +1,9 @@
 <script>
-    import "./page.scss"
+    import "./page.scss";
 </script>
 
 <div class="navbar">
-    <img src="/Dragon.svg" alt="Logo" width="50">
+    <img src="/Dragon.svg" alt="Logo" width="50" />
     <div class="title">
         <h1>DnD Sheet</h1>
 
@@ -20,7 +20,7 @@
 </div>
 
 <style lang="scss">
-    .content{
+    .content {
         width: 100%;
         height: fit-content;
 
@@ -31,7 +31,7 @@
         min-width: 200px;
     }
 
-    img{
+    img {
         pointer-events: none;
     }
 
@@ -97,4 +97,3 @@
         }
     }
 </style>
-

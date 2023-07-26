@@ -1,31 +1,31 @@
 @font-face {
-    font-family: 'Mad Hacker';
+    font-family: "Mad Hacker";
     font-style: normal;
     font-weight: bold;
-    src: local(''), url('/fonts/Mad Hacker.ttf') format('truetype');
+    src: local(""), url("/fonts/Mad Hacker.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Edit';
+    font-family: "Edit";
     font-style: normal;
     font-weight: normal;
-    src: local(''), url('/fonts/editundo.ttf') format('truetype');
+    src: local(""), url("/fonts/editundo.ttf") format("truetype");
 }
 
 :root {
     --font-size: 1rem;
     --text: black;
-    --primary: #FFFAEB;
-    --secondary: #F5F5F5;
-    --tertiary: #E6E6E6;
-    --quaternary: #D4D4D4;
-    --quinary: #A6A6A6;
+    --primary: #fffaeb;
+    --secondary: #f5f5f5;
+    --tertiary: #e6e6e6;
+    --quaternary: #d4d4d4;
+    --quinary: #a6a6a6;
     --senary: #737373;
     --septenary: #404040;
-    --octonary: #1A1A1A;
+    --octonary: #1a1a1a;
 }
 
-body{
+body {
     margin: 0;
     padding: 10px;
 
@@ -39,7 +39,22 @@ h1 {
     margin: 0;
     padding: 0;
 
-    font-family: 'Mad Hacker';
+    font-family: "Mad Hacker";
+
+    user-select: none;
+
+    color: var(--text);
+}
+
+h2 {
+    width: fit-content;
+    height: fit-content;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "Rubik";
+    font-size: var(--font-size);
 
     user-select: none;
 
@@ -52,7 +67,7 @@ p {
 
     font-size: var(--font-size);
 
-    font-family: 'Rubik';
+    font-family: "Rubik";
 
     color: var(--text);
 }
@@ -64,7 +79,7 @@ a {
     text-decoration: none;
     color: black;
 
-    font-family: 'Edit';
+    font-family: "Edit";
     font-size: var(--font-size);
 
     user-select: none;
@@ -80,7 +95,7 @@ label {
     margin: 0;
     padding: 0;
 
-    font-family: 'Rubik';
+    font-family: "Rubik";
     font-size: var(--font-size);
 
     color: var(--text);
@@ -90,7 +105,7 @@ input {
     margin: 0;
     padding: 2px;
 
-    font-family: 'Rubik';
+    font-family: "Rubik";
     font-size: var(--font-size);
 
     background-color: var(--primary);
@@ -113,7 +128,7 @@ button {
     padding: 0;
     padding-inline: 5px;
 
-    font-family: 'Edit';
+    font-family: "Edit";
     font-size: var(--font-size);
 
     background-color: var(--primary);

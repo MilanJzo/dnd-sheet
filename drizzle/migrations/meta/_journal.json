@@ -1,13 +1,13 @@
 {
-  "version": "5",
-  "dialect": "sqlite",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "5",
-      "when": 1690390247830,
-      "tag": "0000_brainy_the_twelve",
-      "breakpoints": true
-    }
-  ]
+    "version": "5",
+    "dialect": "sqlite",
+    "entries": [
+        {
+            "idx": 0,
+            "version": "5",
+            "when": 1690390247830,
+            "tag": "0000_brainy_the_twelve",
+            "breakpoints": true
+        }
+    ]
 }
