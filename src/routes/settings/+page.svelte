@@ -1,18 +1,17 @@
 <script lang="ts">
     import { enhance } from "$app/forms";
+    import { redirect } from "@sveltejs/kit";
     import type { PageData } from "./$types";
-  
+
     export let data: PageData;
-  </script>
+</script>
 
 <p>Settings</p>
 
 <h1>Profile</h1>
+
 <p>User id: {data.userId}</p>
 <p>Username: {data.username}</p>
 <form method="post" action="?/logout" use:enhance>
-	<input type="submit" value="Sign out" />
+    <input type="submit" value="Sign out" />
 </form>
-
-<a href="/login">Login</a><br />
-<a href="/signup">Signup</a><br />

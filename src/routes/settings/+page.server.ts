@@ -1,4 +1,3 @@
-import { db } from "$lib/server/drizzle";
 import { fail, redirect } from "@sveltejs/kit";
 import type { Actions, PageServerLoad } from "./$types";
 
@@ -6,7 +5,7 @@ import { auth } from "$lib/server/lucia";
 
 export const load: PageServerLoad = async ({ locals }) => {
     const session = await locals.auth.validate();
-    // if (!session) throw redirect(302, "/login");
+    if (!session) throw redirect(302, "/login");
 
     return {
         userId: session?.user.userId,
