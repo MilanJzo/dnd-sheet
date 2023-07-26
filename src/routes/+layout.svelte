@@ -21,10 +21,10 @@
 
 <style lang="scss">
     .content {
-        width: 100%;
+        width: fit-content;
         height: fit-content;
 
-        // padding: 20px;
+        padding: 20px;
     }
 
     h1 {
