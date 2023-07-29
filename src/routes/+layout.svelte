@@ -21,10 +21,15 @@
 
 <style lang="scss">
     .content {
-        width: fit-content;
-        height: fit-content;
+        width: auto;
+        min-height: 400px;
 
         padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     h1 {
