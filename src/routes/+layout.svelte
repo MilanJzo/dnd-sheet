@@ -28,8 +28,8 @@
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
     }
 
     h1 {

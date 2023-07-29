@@ -6,9 +6,8 @@
     export let data: PageData;
 </script>
 
-<h1>Profile</h1>
-
 <div class="profile">
+    <h1>Profile</h1>
     <div class="bullet-point">
         <h2>Username</h2>
         <div>
@@ -28,12 +27,16 @@
 
 <style lang="scss">
     .profile {
-        padding-top: 10px;
-        padding-inline: 10px;
+        // padding-top: 10px;
+        // padding-inline: 10px;
+
+        padding-bottom: 10px;
 
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        border-bottom: 1px solid var(--text);
     }
 
     .bullet-point {
@@ -48,7 +51,7 @@
         }
     }
 
-    form{
+    form {
         padding: 0;
         padding-top: 5px;
     }
