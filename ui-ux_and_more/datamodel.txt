@@ -150,7 +150,7 @@ specialAbilities: [] of specialability-IDs		portable between your characters? or
 	}
 
 
-
+//TOSCRAPE
 
 feats: [] of feat-IDs
 
