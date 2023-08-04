@@ -19,6 +19,7 @@
     {#if $theme == "DARK"}
         <style>
             :root {
+                --invert: 1;
                 --secondary: darkgrey;
                 --primary: #2c2922;
                 --text: #ffffff;
@@ -35,6 +36,7 @@
     {:else}
         <style>
             :root {
+                --invert: 0;
                 --secondary: #6c6c6c;
                 --primary: #fff3cf;
                 --text: #000000;
@@ -79,6 +81,8 @@
 
     img {
         pointer-events: none;
+        -webkit-filter: invert(var(--invert)); /* safari 6.0 - 9.0 */
+        filter: invert(var(--invert));
     }
 
     .navbar {
