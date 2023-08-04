@@ -1,6 +1,31 @@
 <script>
     import "./page.scss";
+    import { theme } from "../lib/stores";
 </script>
+
+<svelte:head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+
+    {#if $theme == "DARK"}
+        <style>
+            :root {
+                --secondary: darkgrey;
+                --primary: #2c2922;
+                --text: #ffffff;
+            }
+        </style>
+    {:else}
+        <style>
+            :root {
+                --secondary: darkblue;
+                --primary: #fff3cf;
+                --text: black;
+            }
+        </style>
+    {/if}
+</svelte:head>
 
 <div class="navbar">
     <img src="/Dragon.svg" alt="Logo" width="50" />

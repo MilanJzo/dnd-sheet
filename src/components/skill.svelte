@@ -22,6 +22,10 @@
             <option value="CHA">CHA</option>
         </select>
     </div>
+    <div class="wrap">
+        <input type="number" class="input" />
+        <p>Ranks</p>
+    </div>
 </main>
 
 <style lang="scss">
@@ -57,7 +61,7 @@
 
     .select {
         width: auto;
-        height: 80%;
+        height: 15px;
 
         padding: 0;
         padding-inline: 5px;
@@ -71,14 +75,23 @@
 
     .skillLa {
         width: auto;
-        height: fit-content;
+        height: 20px;
 
         padding: 0;
-        padding-inline: 5px;
+        padding-inline: 3px;
 
         border: 1px solid var(--text);
         border-radius: 5px;
 
         background-color: var(--primary);
+
+        font-size: var(--text-size);
+    }
+
+    .input {
+        width: 100%;
+        height: 21px;
+
+        padding: 0;
     }
 </style>

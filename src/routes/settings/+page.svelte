@@ -1,11 +1,9 @@
 <script lang="ts">
     import { enhance } from "$app/forms";
-    import { redirect } from "@sveltejs/kit";
     import type { PageData } from "./$types";
+    import { theme } from "../../lib/stores";
 
     export let data: PageData;
-
-    let theme = "DARK";
 </script>
 
 <div class="entry">
@@ -31,7 +29,7 @@
     <div class="bullet-point">
         <h2>Preset</h2>
         <div>
-            <select bind:value={theme}>
+            <select bind:value={$theme}>
                 <option value="LIGHT">Light</option>
                 <option value="DARK">Dark</option>
             </select>
