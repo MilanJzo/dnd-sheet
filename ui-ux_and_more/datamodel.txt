@@ -1,4 +1,3 @@
-
 character_id
 character_name
 character_player

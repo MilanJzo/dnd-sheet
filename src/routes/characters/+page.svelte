@@ -1,4 +1,4 @@
-// default values for character
+<!-- default values for character -->
 <!-- {
     character: {
         name: "",
@@ -123,6 +123,6 @@
     feats: [],
     spells: [],
 } -->
-// default values for character
+<!-- default values for character -->
 
 <p>Characters - Create and Overview</p>
