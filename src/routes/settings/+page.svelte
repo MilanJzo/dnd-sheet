@@ -4,9 +4,11 @@
     import type { PageData } from "./$types";
 
     export let data: PageData;
+
+    let theme = "DARK";
 </script>
 
-<div class="profile">
+<div class="entry">
     <h1>Profile</h1>
     <div class="bullet-point">
         <h2>Username</h2>
@@ -24,9 +26,21 @@
         <button type="submit">Sign out</button>
     </form>
 </div>
+<div class="entry">
+    <h1>Theme</h1>
+    <div class="bullet-point">
+        <h2>Preset</h2>
+        <div>
+            <select bind:value={theme}>
+                <option value="LIGHT">Light</option>
+                <option value="DARK">Dark</option>
+            </select>
+        </div>
+    </div>
+</div>
 
 <style lang="scss">
-    .profile {
+    .entry {
         // padding-top: 10px;
         // padding-inline: 10px;
 

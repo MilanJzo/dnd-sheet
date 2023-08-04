@@ -155,3 +155,26 @@ form {
     justify-content: center;
     gap: 10px;
 }
+
+select {
+    margin: 0;
+    padding: 0;
+    padding-left: 3px;
+
+    height: fit-content;
+    width: auto;
+
+    font-family: "Rubik";
+    font-size: var(--font-size);
+
+    background-color: var(--primary);
+
+    border: none;
+    border-radius: 5px;
+
+    color: var(--text);
+
+    &:focus {
+        outline: none; //1px solid var(--text)
+    }
+}
