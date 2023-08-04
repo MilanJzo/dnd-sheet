@@ -153,5 +153,15 @@ specialAbilities: [] of specialability-IDs		portable between your characters? or
 //TOSCRAPE
 
 feats: [] of feat-IDs
+	feat {
+		id
+    	name
+    	description
+    	prerequisites
+    	benefit
+    	normal
+    	special
+    	link
+	}
 
 spells: [] of spell-IDs			calculate Spell-DC of selected spells after loading them
