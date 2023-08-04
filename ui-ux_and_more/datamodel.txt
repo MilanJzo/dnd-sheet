@@ -1,0 +1,150 @@
+character_name
+character_player
+character_class
+character_level
+character_race
+character_alignment
+character_deity
+character_size
+character_age
+character_gender
+character_height
+character_weight
+character_eyes
+character_hair
+character_skin
+character_speed
+character_sizeMod (infered from character_size) ?? would be cool
+
+stats_damageReduction
+stats_initiative
+stats_baseAttackBonus
+stats_spellResistance
+
+grapple (refrence stats_baseattackbonus)  -> can be ignored for db purposes
+grapple_abilityModifier
+grapple	(refrence chracter_sizeMod)  -> can be ignored for db purposes
+grapple_miscellaneous
+
+abilityModifier_STR
+abilityModifier_DEX
+abilityModifier_CON
+abilityModifier_INT
+abilityModifier_WIS
+abilityModifier_CHA
+
+health_hitpoints
+health_wounds
+
+armorclass (refrence armor_armorclassBonus)  -> can be ignored for db purposes
+armorclass (refrence shield_armorclassBonus)  -> can be ignored for db purposes
+armorclass_abilityModifier
+armorclass_natural
+armorclass_deflection
+armorclass_miscellaneous
+armorclass (refrence chracter_sizeMod)  -> can be ignored for db purposes
+
+armor_name
+armor_isEquipped
+armor_armorclassBonus
+armor_maxDEXtoArmorclass
+armor_penalty
+armor_spellFailure
+armor_speed (infered from and replaces character_speed)
+armor_weight
+armor_specialProperties
+
+shield_name
+shield_isEquipped
+shield_armorclassBonus
+shield_weight
+shield_penalty
+shield_spellFailure
+shield_specialProperties
+
+spells_perday_first
+spells_perday_firstBonus
+spells_perday_second
+spells_perday_secondBonus
+spells_perday_third
+spells_perday_thirdBonus
+spells_perday_forth
+spells_perday_forthBonus
+spells_perday_fifth
+spells_perday_fifthBonus
+spells_perday_sixth
+spells_perday_sixthBonus
+spells_perday_seventh
+spells_perday_seventhBonus
+spells_perday_eigth
+spells_perday_eigthBonus
+spells_perday_ninth
+spells_perday_ninthBonus
+spells_spellSave
+spells (refrence abilityModifier)
+
+coins_platinum
+coins_gold
+coins_silver
+coins_copper
+
+fortitude_base
+fortitude (refrences abilityModifier_CON) -> can be ignored for db purposes
+fortitude_magic
+fortitude_miscellaneous
+fortitude_temporary
+
+reflex_base
+reflex (refrences modifier_REF) -> can be ignored for db purposes
+reflex_magic
+reflex_miscellaneous
+reflex_temporary
+
+will_base
+will (refrences modifier_WIS) -> can be ignored for db purposes
+will_magic
+will_miscellaneous
+will_temporary
+
+attacks: [] of attack-IDs
+	attack {
+	ID
+	attackbonus
+	damage
+	critical
+	range
+	type
+	notes
+	}
+
+skills: [] of skill-IDs			handle custom skills with dialouge and newly created skill
+	skill {
+	ID
+	classSkill
+	hasToBeClassSkill
+	isAffectedByArmorPenalty
+
+	name
+	abilityModifier
+	ranks
+	miscellaneous
+	}
+
+inventory: [] of item-IDs		import from your other chars?
+	item{
+	name
+	description
+	link?
+	}
+
+languages: [] of strings
+
+
+
+
+
+specialabilities: [] of specialability-IDs
+
+feats: [] of feat-IDs
+
+spells: [] of spell-IDs			calculate Spell-DC of selected spells after loading
