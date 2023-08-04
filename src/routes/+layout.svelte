@@ -1,6 +1,14 @@
 <script>
     import "./page.scss";
     import { theme, primary, secondary, text } from "../lib/stores";
+
+    // $:{
+    //     if(typeof window !== "undefined"){
+    //         document.body.style.setProperty("--primary", $primary);
+    //         document.body.style.setProperty("--secondary", $secondary);
+    //         document.body.style.setProperty("--text", $text);
+    //     }
+    // }
 </script>
 
 <svelte:head>
