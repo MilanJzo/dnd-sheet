@@ -1,11 +1,20 @@
 <script>
-    let modtype = `STR`;
+    let skill = {
+        name: `SkillName`,
+        mod: `STR`,
+        trained: false,
+        classSkill: false,
+        ranks: 0,
+        misc: 0
+    };
+
+    let isUsable = skill.classSkill || skill.trained;
     let modValue = 0;
-    let value = 0;
+    let value = modValue + skill.ranks + skill.misc;
 </script>
 
 <main>
-    <input type="checkbox" />
+    <input type="checkbox" bind:value={skill.classSkill} />
     <div class="wrap">
         <label for="" class="skillLa">{value}</label>
         <p>AbilityName</p>
@@ -13,7 +22,7 @@
     <p>=</p>
     <div class="wrap">
         <label for="" class="skillLa">{modValue}</label>
-        <select bind:value={modtype} class="select">
+        <select bind:value={skill.mod} class="select">
             <option value="STR">STR</option>
             <option value="DEX">DEX</option>
             <option value="CON">CON</option>
@@ -23,17 +32,23 @@
         </select>
     </div>
     <div class="wrap">
-        <input type="number" class="input" />
+        <input type="number" class="input" bind:value={skill.ranks} disabled={isUsable} />
         <p>Ranks</p>
+    </div>
+    <div class="wrap">
+        <input type="number" class="input" bind:value={skill.misc} />
+        <p>Misc</p>
     </div>
 </main>
 
 <style lang="scss">
     main {
-        width: auto;
+        width: fit-content;
         height: fit-content;
 
+        margin: 0;
         padding: 5px;
+        padding-inline: 10px;
 
         display: flex;
         gap: 10px;
