@@ -36,7 +36,7 @@
             </select>
         </div>
     </div>
-    <!-- {#if $theme == "CUSTOM"}
+     <!-- {#if $theme == "CUSTOM"}
         <div class="bullet-point">
             <h2>Background</h2>
             <div>
@@ -55,7 +55,7 @@
                 <input type="text" bind:value={$text} class="colorIN" />
             </div>
         </div>
-    {/if} -->
+    {/if}  -->
 </div>
 
 <style lang="scss">
