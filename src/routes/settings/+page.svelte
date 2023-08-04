@@ -1,7 +1,7 @@
 <script lang="ts">
     import { enhance } from "$app/forms";
     import type { PageData } from "./$types";
-    import { theme } from "../../lib/stores";
+    import { theme, secondary, primary, text } from "../../lib/stores";
 
     export let data: PageData;
 </script>
@@ -32,12 +32,41 @@
             <select bind:value={$theme}>
                 <option value="LIGHT">Light</option>
                 <option value="DARK">Dark</option>
+                <!-- <option value="CUSTOM">Custom</option> -->
             </select>
         </div>
     </div>
+    <!-- {#if $theme == "CUSTOM"}
+        <div class="bullet-point">
+            <h2>Background</h2>
+            <div>
+                <input type="text" bind:value={$primary} class="colorIN" />
+            </div>
+        </div>
+        <div class="bullet-point">
+            <h2>Accent</h2>
+            <div>
+                <input type="text" bind:value={$secondary} class="colorIN" />
+            </div>
+        </div>
+        <div class="bullet-point">
+            <h2>Text</h2>
+            <div>
+                <input type="text" bind:value={$text} class="colorIN" />
+            </div>
+        </div>
+    {/if} -->
 </div>
 
 <style lang="scss">
+    .colorIN {
+        width: fit-content;
+        height: 100%;
+
+        border: none;
+        border-bottom: 1px solid var(--text);
+    }
+
     .entry {
         // padding-top: 10px;
         // padding-inline: 10px;

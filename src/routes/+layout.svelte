@@ -1,6 +1,6 @@
 <script>
     import "./page.scss";
-    import { theme } from "../lib/stores";
+    import { theme, primary, secondary, text } from "../lib/stores";
 </script>
 
 <svelte:head>
@@ -16,12 +16,20 @@
                 --text: #ffffff;
             }
         </style>
+        <!-- {:else if $theme == "CUSTOM"}
+        <style>
+            :root {
+                --secondary: {$secondary};
+                --primary: {$primary};
+                --text: {$text};
+            }
+        </style> -->
     {:else}
         <style>
             :root {
-                --secondary: darkblue;
+                --secondary: #6c6c6c;
                 --primary: #fff3cf;
-                --text: black;
+                --text: #000000;
             }
         </style>
     {/if}
