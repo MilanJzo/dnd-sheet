@@ -1,28 +1,36 @@
 <script>
     let skill = {
-        name: `SkillName`,
-        mod: `STR`,
-        trained: false,
+        id: 0,
         classSkill: false,
+        hasToBeClassSkill: false,
+        isAffectedByArmorPenalty: false,
+
+        name: `SkillName`,
+        total: 0,
+        abilityModifier: `STR`,
         ranks: 0,
-        misc: 0
+        miscellaneous: 0
     };
 
-    let isUsable = skill.classSkill || skill.trained;
+    let deactivate = !skill.classSkill && skill.hasToBeClassSkill;
+    let halfedEffect = !skill.classSkill && !skill.hasToBeClassSkill;
     let modValue = 0;
-    let value = modValue + skill.ranks + skill.misc;
+    let currentCalculatedValue =
+        modValue + (halfedEffect ? skill.ranks / 2 : skill.ranks) + skill.miscellaneous;
+
+    //TODO update logic
 </script>
 
 <main>
     <input type="checkbox" bind:value={skill.classSkill} />
     <div class="wrap">
-        <label for="" class="skillLa">{value}</label>
-        <p>AbilityName</p>
+        <label for="" class="skillLa">{currentCalculatedValue}</label>
+        <p>{skill.name}</p>
     </div>
     <p>=</p>
     <div class="wrap">
         <label for="" class="skillLa">{modValue}</label>
-        <select bind:value={skill.mod} class="select">
+        <select bind:value={skill.abilityModifier} class="select">
             <option value="STR">STR</option>
             <option value="DEX">DEX</option>
             <option value="CON">CON</option>
@@ -32,12 +40,12 @@
         </select>
     </div>
     <div class="wrap">
-        <input type="number" class="input" bind:value={skill.ranks} disabled={isUsable} />
+        <input type="number" class="input" bind:value={skill.ranks} disabled={deactivate} />
         <p>Ranks</p>
     </div>
     <div class="wrap">
-        <input type="number" class="input" bind:value={skill.misc} />
-        <p>Misc</p>
+        <input type="number" class="input" bind:value={skill.miscellaneous} />
+        <p>Miscellaneous</p>
     </div>
 </main>
 

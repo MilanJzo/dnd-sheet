@@ -22,3 +22,4 @@ export const user_session = sqliteTable("user_session", {
     active_expires: integer("active_expires").notNull(),
     idle_expires: integer("idle_expires").notNull()
 });
+

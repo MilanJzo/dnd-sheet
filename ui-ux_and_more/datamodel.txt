@@ -1,3 +1,5 @@
+
+character_id
 character_name
 character_player
 character_class
@@ -62,26 +64,26 @@ shield_penalty
 shield_spellFailure
 shield_specialProperties
 
-spells_perday_first
-spells_perday_firstBonus
-spells_perday_second
-spells_perday_secondBonus
-spells_perday_third
-spells_perday_thirdBonus
-spells_perday_forth
-spells_perday_forthBonus
-spells_perday_fifth
-spells_perday_fifthBonus
-spells_perday_sixth
-spells_perday_sixthBonus
-spells_perday_seventh
-spells_perday_seventhBonus
-spells_perday_eigth
-spells_perday_eigthBonus
-spells_perday_ninth
-spells_perday_ninthBonus
-spells_spellSave
-spells (refrence abilityModifier)
+spellStats_perday_first
+spellStats_perday_firstBonus
+spellStats_perday_second
+spellStats_perday_secondBonus
+spellStats_perday_third
+spellStats_perday_thirdBonus
+spellStats_perday_forth
+spellStats_perday_forthBonus
+spellStats_perday_fifth
+spellStats_perday_fifthBonus
+spellStats_perday_sixth
+spellStats_perday_sixthBonus
+spellStats_perday_seventh
+spellStats_perday_seventhBonus
+spellStats_perday_eigth
+spellStats_perday_eigthBonus
+spellStats_perday_ninth
+spellStats_perday_ninthBonus
+spellStats_spellSaveDC
+spellStats (refrence abilityModifier)
 
 coins_platinum
 coins_gold
@@ -108,43 +110,49 @@ will_temporary
 
 attacks: [] of attack-IDs
 	attack {
-	ID
-	attackbonus
-	damage
-	critical
-	range
-	type
-	notes
+		id
+		attackbonus
+		damage
+		critical
+		range
+		type
+		notes
 	}
 
 skills: [] of skill-IDs			handle custom skills with dialouge and newly created skill
 	skill {
-	ID
-	classSkill
-	hasToBeClassSkill
-	isAffectedByArmorPenalty
+		id
+		classSkill
+		hasToBeClassSkill
+		isAffectedByArmorPenalty
 
-	name
-	abilityModifier
-	ranks
-	miscellaneous
+		name
+		abilityModifier
+		ranks
+		miscellaneous
 	}
 
-inventory: [] of item-IDs		import from your other chars?
+inventory: [] of item-IDs		portable between your characters?
 	item{
-	name
-	description
-	link?
+		id
+		name
+		description
+		link?
 	}
 
 languages: [] of strings
 
+specialAbilities: [] of specialability-IDs		portable between your characters? or even make globally available?
+	specialability {
+		id
+		name
+		description
+		link?
+	}
 
 
 
-
-specialabilities: [] of specialability-IDs
 
 feats: [] of feat-IDs
 
-spells: [] of spell-IDs			calculate Spell-DC of selected spells after loading
+spells: [] of spell-IDs			calculate Spell-DC of selected spells after loading them
