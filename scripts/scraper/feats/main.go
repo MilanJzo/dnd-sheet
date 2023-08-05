@@ -117,12 +117,18 @@ func getFeats() {
 	}
 
 	j, err := json.Marshal(feats)
-	// j, err := json.MarshalIndent(feats, "", "  ")
 	if err != nil {
 		log.Fatal(err)
 	}
-	// log.Println(string(j))
+
 	os.WriteFile("feats.json", j, 0644)
+
+	formatted, err := json.MarshalIndent(feats, "", "  ")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	os.WriteFile("formatted_feats.json", formatted, 0644)
 }
 
 func main() {
