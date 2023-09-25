@@ -1,15 +1,14 @@
 import { lucia } from "lucia";
 import { sveltekit } from "lucia/middleware";
 import { dev } from "$app/environment";
-import { libsql } from "@lucia-auth/adapter-sqlite";
-import { client } from "$lib/server/drizzle";
+import { pg } from "@lucia-auth/adapter-postgresql";
+import { pool } from "$lib/server/drizzle";
 
-// expect error
 export const auth = lucia({
     env: dev ? "DEV" : "PROD",
     middleware: sveltekit(),
-    adapter: libsql(client, {
-        user: "user",
+    adapter: pg(pool, {
+        user: "auth_user",
         key: "user_key",
         session: "user_session"
     }),
