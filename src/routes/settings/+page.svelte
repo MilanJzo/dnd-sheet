@@ -59,14 +59,6 @@
 </div>
 
 <style lang="scss">
-    .colorIN {
-        width: fit-content;
-        height: 100%;
-
-        border: none;
-        border-bottom: 1px solid var(--text);
-    }
-
     .entry {
         // padding-top: 10px;
         // padding-inline: 10px;
@@ -93,8 +85,7 @@
     }
 
     form {
-        padding: 0;
-        padding-top: 5px;
+      padding: 5px 0 0;
     }
 
     h1 {
