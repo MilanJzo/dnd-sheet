@@ -1,5 +1,5 @@
 <script>
-    let skill = {
+    $: skill = {
         id: 0,
         classSkill: false,
         hasToBeClassSkill: false,
@@ -12,17 +12,19 @@
         miscellaneous: 0
     };
 
-    let deactivate = !skill.classSkill && skill.hasToBeClassSkill;
-    let halfedEffect = !skill.classSkill && !skill.hasToBeClassSkill;
-    let modValue = 0;
-    let currentCalculatedValue =
-        modValue + (halfedEffect ? skill.ranks / 2 : skill.ranks) + skill.miscellaneous;
+    $: deactivate = !skill.classSkill && skill.hasToBeClassSkill;
+    //$: halfedEffect = !skill.classSkill && !skill.hasToBeClassSkill;
+    $: modValue = 0;
+    $: currentCalculatedValue =
+        modValue +
+        (!skill.classSkill && !skill.hasToBeClassSkill ? skill.ranks / 2 : skill.ranks) +
+        skill.miscellaneous;
 
     //TODO update logic
 </script>
 
 <main>
-    <input type="checkbox" bind:value={skill.classSkill} />
+    <input type="checkbox" bind:checked={skill.classSkill} />
     <div class="wrap">
         <label for="" class="skillLa">{currentCalculatedValue}</label>
         <p>{skill.name}</p>
@@ -51,7 +53,7 @@
 
 <style lang="scss">
     main {
-        width: fit-content;
+        width: 100%;
         height: fit-content;
 
         margin: 0;
