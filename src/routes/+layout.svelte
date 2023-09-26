@@ -133,7 +133,7 @@
         font-size: 1.25rem;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 780px) {
         .title {
             padding: 0;
             flex-direction: column;

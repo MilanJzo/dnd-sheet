@@ -27,10 +27,10 @@
     <div class={skill.classSkill ? "checked" : "nocheck"} />
     <input class="check" type="checkbox" bind:checked={skill.classSkill} />
     <div class="wrap">
-        <p>{skill.name}:</p>
+        <p class="title">{skill.name}:</p>
         <label for="" class="label">{currentCalculatedValue}</label>
     </div>
-    <p>=</p>
+    <p class="collapse">=</p>
     <div class="wrap">
         <div class="modSelect">
             <select bind:value={skill.abilityModifier} class="select">
@@ -45,10 +45,12 @@
         </div>
         <label for="" class="label">{modValue}</label>
     </div>
+    <p class="collapse">+</p>
     <div class="wrap">
         <p>Ranks:</p>
         <input type="number" class="input" bind:value={skill.ranks} disabled={deactivate} />
     </div>
+    <p class="collapse">+</p>
     <div class="wrap">
         <p>Miscellaneous:</p>
         <input type="number" class="input" bind:value={skill.miscellaneous} />
@@ -130,7 +132,7 @@
         flex-direction: row;
         gap: 5px;
 
-        border-bottom: 1px solid black;
+        // border-bottom: 1px solid black;
     }
 
     .modSelect {
@@ -140,7 +142,7 @@
     }
 
     .label {
-        width: auto;
+        width: 30px;
         height: 18px;
 
         border: none;
@@ -157,6 +159,7 @@
         height: 15px;
 
         border: none;
+        border-bottom: 1px solid black;
     }
 
     .select {
@@ -189,20 +192,43 @@
         }
     }
 
-    @media screen and (max-width: 600px) {
+    .title {
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 780px) {
         main {
+            width: auto;
+            display: grid;
+            grid-template-columns: 24px 1fr;
             gap: 5px;
         }
 
         .wrap {
+            width: 100%;
             height: fit-content;
-            flex-direction: column;
-            gap: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            grid-column: 2 / 3;
+
+            border: none;
         }
 
-        .modSelect {
-            flex-direction: row;
-            gap: 5px;
+        .input {
+            padding: 0;
+
+            border-bottom: 1px solid black;
+
+            width: 90%;
+        }
+
+        .collapse {
+            display: none;
+        }
+
+        .delbtn {
+            grid-column: 2 / 3;
         }
     }
 </style>
