@@ -121,11 +121,6 @@
         cursor: pointer;
 
         opacity: 0;
-
-        &:hover .checked,
-        &:hover .nocheck {
-            background: var(--hover);
-        }
     }
 
     .wrap {
@@ -159,7 +154,7 @@
 
     .input {
         width: 50px;
-        height: auto;
+        height: 15px;
 
         border: none;
     }
@@ -174,10 +169,6 @@
         border: none;
 
         cursor: pointer;
-
-        &:hover {
-            background: var(--hover);
-        }
     }
 
     .delbtn {
@@ -190,7 +181,28 @@
         cursor: pointer;
 
         &:hover {
-            background: var(--hover);
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        main {
+            gap: 5px;
+        }
+
+        .wrap {
+            height: fit-content;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .modSelect {
+            flex-direction: row;
+            gap: 5px;
         }
     }
 </style>
