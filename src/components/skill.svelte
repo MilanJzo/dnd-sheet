@@ -24,40 +24,173 @@
 </script>
 
 <main>
-    <input type="checkbox" bind:checked={skill.classSkill} />
+    <div class={skill.classSkill ? "checked" : "nocheck"} />
+    <input class="check" type="checkbox" bind:checked={skill.classSkill} />
     <div class="wrap">
-        <label for="" class="skillLa">{currentCalculatedValue}</label>
-        <p>{skill.name}</p>
+        <p>{skill.name}:</p>
+        <label for="" class="label">{currentCalculatedValue}</label>
     </div>
     <p>=</p>
     <div class="wrap">
-        <label for="" class="skillLa">{modValue}</label>
-        <select bind:value={skill.abilityModifier} class="select">
-            <option value="STR">STR</option>
-            <option value="DEX">DEX</option>
-            <option value="CON">CON</option>
-            <option value="INT">INT</option>
-            <option value="WIS">WIS</option>
-            <option value="CHA">CHA</option>
-        </select>
+        <div class="modSelect">
+            <select bind:value={skill.abilityModifier} class="select">
+                <option value="STR">STR</option>
+                <option value="DEX">DEX</option>
+                <option value="CON">CON</option>
+                <option value="INT">INT</option>
+                <option value="WIS">WIS</option>
+                <option value="CHA">CHA</option>
+            </select>
+            <p>:</p>
+        </div>
+        <label for="" class="label">{modValue}</label>
     </div>
     <div class="wrap">
+        <p>Ranks:</p>
         <input type="number" class="input" bind:value={skill.ranks} disabled={deactivate} />
-        <p>Ranks</p>
     </div>
     <div class="wrap">
+        <p>Miscellaneous:</p>
         <input type="number" class="input" bind:value={skill.miscellaneous} />
-        <p>Miscellaneous</p>
     </div>
+    <button class="delbtn">delete</button>
 </main>
 
 <style lang="scss">
+    :root {
+        --hover: white;
+    }
+
     main {
-        width: 100%;
+        width: fit-content;
+        min-width: fit-content;
         height: fit-content;
 
         padding: 5px;
 
-        background: red;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+
+        border: 2px solid black;
+        border-radius: 10px;
+
+        position: relative;
+    }
+
+    p {
+        user-select: none;
+    }
+
+    .checked,
+    .nocheck {
+        width: 20px;
+        height: 20px;
+
+        border: 2px solid black;
+        border-radius: 5px;
+
+        position: relative;
+    }
+
+    .checked::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 16px;
+        height: 16px;
+
+        background-color: black;
+        border-radius: 5px;
+    }
+
+    .check {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+
+        width: 24px;
+        height: 24px;
+
+        border: 2px solid black;
+
+        cursor: pointer;
+
+        opacity: 0;
+
+        &:hover .checked,
+        &:hover .nocheck {
+            background: var(--hover);
+        }
+    }
+
+    .wrap {
+        height: 19px;
+
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+
+        border-bottom: 1px solid black;
+    }
+
+    .modSelect {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .label {
+        width: auto;
+        height: 18px;
+
+        border: none;
+
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+
+        user-select: none;
+    }
+
+    .input {
+        width: 50px;
+        height: auto;
+
+        border: none;
+    }
+
+    .select {
+        width: auto;
+        height: 19px;
+
+        padding: 0;
+        margin: 0;
+
+        border: none;
+
+        cursor: pointer;
+
+        &:hover {
+            background: var(--hover);
+        }
+    }
+
+    .delbtn {
+        width: fit-content;
+        height: 24px;
+
+        border: 2px solid black;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        &:hover {
+            background: var(--hover);
+        }
     }
 </style>
