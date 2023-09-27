@@ -27,8 +27,17 @@
     <div class={skill.classSkill ? "checked" : "nocheck"} />
     <input class="check" type="checkbox" bind:checked={skill.classSkill} />
     <div class="wrap">
-        <p class="title">{skill.name}:</p>
-        <label for="" class="label">{currentCalculatedValue}</label>
+        <div class="titleWrap">
+            {#if skill.isAffectedByArmorPenalty}
+                <p class="penSym">*</p>
+            {/if}
+            {#if !skill.isAffectedByArmorPenalty}
+                <p class="penSym" />
+            {/if}
+
+            <p class="title">{skill.name}:</p>
+        </div>
+        <label for="" class="label" style="">{currentCalculatedValue}</label>
     </div>
     <p class="collapse">=</p>
     <div class="wrap">
@@ -193,10 +202,24 @@
     }
 
     .title {
+        width: 100px;
+
+        overflow-x: scroll;
+
         font-weight: bold;
     }
 
-    @media screen and (max-width: 780px) {
+    .titleWrap {
+        display: flex;
+    }
+
+    .penSym {
+        width: 10px;
+
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 830px) {
         main {
             width: auto;
             display: grid;
