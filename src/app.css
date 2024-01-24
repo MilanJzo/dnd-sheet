@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+:root {
+    --main-bg: #343434;
+    --accent-bg: #232323;
+
+    --main-text: #FFFFFF;
+
+    --font-size: 1rem;
+
+    --page-bg: #FFFFFF;
+    --page-text: #232323;
+
+    background-color: var(--main-bg);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg: #FFFFFF;
+        --accent-bg: #F0F0F0;
+
+        --main-text: #232323;
+
+        --page-bg: white;
+        --page-text: #232323;
+    }
+}
