@@ -12,182 +12,37 @@
     src: local(""), url("/fonts/editundo.ttf") format("truetype");
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
 :root {
-    --invert: 0;
+    --main-bg: #343434;
+    --accent-bg: #232323;
+
+    --main-text: #FFFFFF;
+
     --font-size: 1rem;
-    --text: black;
-    --primary: #fff3cf;
-    --secondary: #6c6c6c;
-    --tertiary: #e6e6e6;
-    --quaternary: #d4d4d4;
-    --quinary: #a6a6a6;
-    --senary: #737373;
-    --septenary: #404040;
-    --octonary: #1a1a1a;
+
+    --page-bg: #FFFFFF;
+    --page-text: #232323;
+
+    background-color: var(--main-bg);
 }
 
-body {
-    margin: 0;
-    padding: 10px;
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg: #FFFFFF;
+        --accent-bg: #F0F0F0;
 
-    background-color: var(--primary);
-}
+        --main-text: #232323;
 
-h1 {
-    width: fit-content;
-    height: fit-content;
-
-    margin: 0;
-    padding: 0;
-
-    font-family: "Mad Hacker";
-
-    user-select: none;
-
-    color: var(--text);
-}
-
-h2 {
-    width: fit-content;
-    height: fit-content;
-
-    margin: 0;
-    padding: 0;
-
-    font-family: "Rubik";
-    font-size: var(--font-size);
-
-    user-select: none;
-
-    color: var(--text);
-}
-
-p {
-    margin: 0;
-    padding: 0;
-
-    font-size: var(--font-size);
-
-    font-family: "Rubik";
-
-    color: var(--text);
-}
-
-a {
-    margin: 0;
-    padding: 0;
-
-    text-decoration: none;
-    color: black;
-
-    font-family: "Edit";
-    font-size: var(--font-size);
-
-    user-select: none;
-
-    color: var(--text);
-
-    &:hover {
-        color: var(--secondary);
-    }
-}
-
-label {
-    margin: 0;
-    padding: 0;
-
-    font-family: "Rubik";
-    font-size: var(--font-size);
-
-    color: var(--text);
-}
-
-input {
-    margin: 0;
-    padding: 2px;
-
-    font-family: "Rubik";
-    font-size: var(--font-size);
-
-    background-color: var(--primary);
-
-    border: none;
-    border-bottom: 1px solid var(--text);
-    border-radius: 0, 0, 5px, 5px;
-
-    color: var(--text);
-
-    &:focus {
-        outline: none;
-    }
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-button {
-    width: fit-content;
-    height: fit-content;
-
-    margin: 0;
-    padding: 0;
-    padding-inline: 5px;
-
-    font-family: "Edit";
-    font-size: var(--font-size);
-
-    background-color: var(--primary);
-
-    border: none;
-    border: 1px solid var(--text);
-    border-radius: 5px;
-
-    font-size: var(--font-size);
-
-    color: var(--text);
-}
-
-form {
-    width: fit-content;
-    height: fit-content;
-
-    padding: 10px;
-    margin: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-}
-
-select {
-    margin: 0;
-    padding: 0;
-    padding-left: 3px;
-
-    height: fit-content;
-    width: auto;
-
-    font-family: "Rubik";
-    font-size: var(--font-size);
-
-    background-color: var(--primary);
-
-    border: none;
-    border-radius: 5px;
-
-    color: var(--text);
-
-    &:focus {
-        outline: none; //1px solid var(--text)
+        --page-bg: white;
+        --page-text: #232323;
     }
 }

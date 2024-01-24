@@ -1,1 +1,0 @@
-<p>Characters - edit</p>
