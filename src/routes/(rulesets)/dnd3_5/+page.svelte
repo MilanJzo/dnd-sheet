@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="bg-red-600" />
+<div class="page" />
 
 <style lang="scss">
 </style>
