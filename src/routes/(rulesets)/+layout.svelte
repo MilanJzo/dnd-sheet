@@ -124,8 +124,6 @@
 
         padding: 10px;
 
-        justify-self: center;
-
         background-color: var(--main-bg);
         color: var(--main-text);
 
