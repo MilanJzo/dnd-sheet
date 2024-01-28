@@ -13,7 +13,20 @@
 
 <div class="page">
     <div class="content">
-        <slot name="page" />
+        <p class="ruleset">
+            {#if active_footer_item === "dnd3_5"}
+                DnD 3.5
+            {:else if active_footer_item === "dnd5e"}
+                DnD 5e
+            {:else if active_footer_item === "pathfinder1"}
+                Pathfinder 1
+            {:else}
+                Home
+            {/if}
+        </p>
+        <div class="paper">
+            <slot name="ruleset" />
+        </div>
     </div>
 
     <div class="sidebar">
@@ -53,7 +66,11 @@
 </div>
 
 <style lang="scss">
+    @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Preahvihear&display=swap");
+
     .page {
+        font-family: "Lato", sans-serif;
+
         width: 100%;
         height: 100vh;
 
@@ -77,6 +94,44 @@
         border-radius: 10px;
 
         background-color: var(--main-bg);
+    }
+
+    .content {
+        padding: 10px;
+
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        overflow-y: scroll;
+        overflow-x: none;
+
+        position: relative;
+    }
+
+    .ruleset {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+        font-size: calc(var(--font-size) * 1.5);
+        font-weight: bold;
+    }
+
+    .paper {
+        width: 21cm;
+        height: 29.7cm;
+
+        padding: 10px;
+
+        justify-self: center;
+
+        background-color: var(--main-bg);
+        color: var(--main-text);
+
+        font-size: calc(var(--font-size) * 0.9);
+
+        background-color: white;
     }
 
     .footer {
