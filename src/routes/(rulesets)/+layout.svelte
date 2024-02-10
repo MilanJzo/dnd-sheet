@@ -21,7 +21,7 @@
             {:else if active_footer_item === "pathfinder1"}
                 Pathfinder 1
             {:else}
-                Home
+                Unknown
             {/if}
         </p>
         <div class="paperwrap">
@@ -79,7 +79,7 @@
         padding: 10px;
 
         display: grid;
-        grid-template-columns: 8fr minmax(300px, 2fr);
+        grid-template-columns: 8fr minmax(200px, 2fr);
         grid-template-rows: 1fr 60px;
         gap: 10px;
 
@@ -101,13 +101,9 @@
     }
 
     .content {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
+        position: relative;
 
         overflow: hidden;
-
-        position: relative;
     }
 
     .ruleset {
@@ -115,8 +111,16 @@
         top: 10px;
         left: 10px;
 
-        font-size: calc(var(--font-size) * 1.5);
+        padding: 5px;
+
+        font-size: calc(var(--font-size) * 1.25);
         font-weight: bold;
+
+        border-radius: 8px;
+
+        background-color: var(--accent-bg);
+
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     }
 
     .paperwrap {
@@ -125,16 +129,16 @@
 
         padding: 10px;
 
-        display: flex;
-        justify-content: center;
+        display: grid;
+        place-items: center;
 
-        overflow-y: scroll;
-        overflow-x: scroll;
+        overflow: auto;
     }
 
     .paper {
-        width: 1000px;
-        height: 1414px;
+        min-width: 800px;
+        width: 800px;
+        height: 1200px;
 
         padding: 10px;
 
@@ -156,9 +160,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-
-        overflow-x: scroll;
-        overflow-y: none;
     }
 
     .footer_item,
