@@ -129,16 +129,16 @@
 
         padding: 10px;
 
-        display: grid;
+        display: grid; // flex somehow fucks up paddings in firefox
         place-items: center;
 
         overflow: auto;
     }
 
     .paper {
-        min-width: 800px;
-        width: 800px;
-        height: 1200px;
+        min-width: 21cm;
+        width: 21cm;
+        height: 29.7cm;
 
         padding: 10px;
 
