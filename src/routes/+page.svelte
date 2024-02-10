@@ -35,59 +35,71 @@
             </svg>
         </a>
     </div>
-    <div class="options">
-        <a class="link" href="/dnd3_5"> DnD 3.5 </a>
-        <a class="link" href="/dnd5e"> DnD 5e </a>
-        <a class="link" href="/pathfinder1"> Pathfinder 1 </a>
+
+    <div class="welcome">
+        <p>
+            Welcome to DnDSheet! This is a project that I am working on to help me learn Svelte and
+            to help me keep track of my DnD characters. I hope you enjoy it!
+        </p>
     </div>
 </div>
 
 <style lang="scss">
-    .page {
-        min-height: 100vh;
+    .welcome {
+        width: 600px;
+        padding: 25px 75px;
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
+        gap: 25px;
+
+        border-radius: 10px;
+
+        font-size: 1.1rem;
+
+        background-color: var(--main-bg);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .page {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 150px;
 
         background-color: var(--accent-bg);
         color: var(--main-text);
     }
 
-    .options {
-        max-width: 800px;
-        height: auto;
-
-        padding: 20px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-
-        border-radius: 10px;
-
-        background-color: var(--main-bg);
-    }
-
     .header {
         width: 100%;
 
-        padding: 20px 50px;
+        padding: 10px 75px;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+        border-radius: 10px;
+
         background-color: var(--main-bg);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     }
 
-    .link,
+    .header h1 {
+        height: fit-content;
+
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
     .settings {
-        padding-inline: 30px;
-        padding-block: 20px;
+        padding-inline: 20px;
+        padding-block: 10px;
 
         display: flex;
         align-items: center;
@@ -109,10 +121,5 @@
         &:focus {
             background-color: var(--accent-bg);
         }
-    }
-
-    .settings {
-        padding-inline: 20px;
-        padding-block: 10px;
     }
 </style>

@@ -10,6 +10,6 @@
 
         display: flex;
 
-        background-color: white;
+        background-color: red;
     }
 </style>
