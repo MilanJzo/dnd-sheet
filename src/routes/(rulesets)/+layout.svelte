@@ -24,8 +24,10 @@
                 Home
             {/if}
         </p>
-        <div class="paper">
-            <slot name="ruleset" />
+        <div class="paperwrap">
+            <div class="paper">
+                <slot />
+            </div>
         </div>
     </div>
 
@@ -77,7 +79,7 @@
         padding: 10px;
 
         display: grid;
-        grid-template-columns: 8fr 2fr;
+        grid-template-columns: 8fr minmax(300px, 2fr);
         grid-template-rows: 1fr 60px;
         gap: 10px;
 
@@ -94,17 +96,16 @@
         border-radius: 10px;
 
         background-color: var(--main-bg);
+
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     }
 
     .content {
-        padding: 10px;
-
         display: flex;
         justify-content: center;
         gap: 10px;
 
-        overflow-y: scroll;
-        overflow-x: none;
+        overflow: hidden;
 
         position: relative;
     }
@@ -118,18 +119,33 @@
         font-weight: bold;
     }
 
-    .paper {
-        width: 21cm;
-        height: 29.7cm;
+    .paperwrap {
+        width: 100%;
+        height: 100%;
 
         padding: 10px;
+
+        display: flex;
+        justify-content: center;
+
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
+
+    .paper {
+        width: 1000px;
+        height: 1414px;
+
+        padding: 10px;
+
+        border-radius: 10px;
 
         background-color: var(--main-bg);
         color: var(--main-text);
 
-        font-size: calc(var(--font-size) * 0.9);
-
         background-color: white;
+
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     }
 
     .footer {
