@@ -66,7 +66,6 @@
 
         display: grid;
         grid-template-rows: 1fr 60px;
-        gap: 10px;
 
         background-color: var(--accent-bg);
         color: var(--main-text);
