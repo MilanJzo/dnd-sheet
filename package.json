@@ -40,6 +40,7 @@
         "@lucia-auth/adapter-postgresql": "^2.0.1",
         "@neondatabase/serverless": "^0.6.0",
         "autoprefixer": "^10.4.17",
+        "dnd-sheet": "file:",
         "drizzle-orm": "^0.27.2",
         "lucia": "^2.7.0",
         "pg": "^8.11.3",
